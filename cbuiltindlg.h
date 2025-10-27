@@ -6,6 +6,7 @@
 #include <QTextEdit>
 #include <QPushButton>
 
+
 class CBuiltinDlg : public QDialog //class 子類別 : public 父類別
 {
     Q_OBJECT //巨集
@@ -23,6 +24,10 @@ private:
     QPushButton *pagePushBtn;
     QPushButton *progressPushBtn;
     QPushButton *printPushBtn;
+    QPushButton *textColorPushBtn;
 
+private slots: //for 槽函數(slot)宣告
+    void doPushBtn();
+    void doTextColor();
 };
 #endif // CBUILTINDLG_H
