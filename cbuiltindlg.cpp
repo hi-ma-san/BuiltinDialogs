@@ -101,11 +101,14 @@ void CBuiltinDlg::doPushBtn() //slot 實作
     {
         QErrorMessage box(this);
         box.setWindowTitle(tr("錯誤訊息盒"));
-        box.showMessage(tr("錯誤訊息盒實例xx"));
-        box.showMessage(tr("錯誤訊息盒實例yy"));
-        box.showMessage(tr("錯誤訊息盒實例zz"));
+        box.showMessage("錯誤訊息盒實例xx");
+        box.exec(); // 保使用 exec()
 
-        box.exec();
+        box.showMessage("錯誤訊息盒實例yy");
+        box.exec(); // 確保使用 exec()，使其模態顯示
+
+        box.showMessage("錯誤訊息盒實例zz");
+        box.exec(); // 確保使用 exec()，使其模態顯示
     }
     else if(btn == fontPushBtn)
     {
