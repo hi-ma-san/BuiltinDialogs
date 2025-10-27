@@ -15,6 +15,22 @@ CBuiltinDlg::CBuiltinDlg(QWidget *parent)
     progressPushBtn = new QPushButton(QStringLiteral("進度條對話盒"));
     printPushBtn    = new QPushButton(QStringLiteral("列印對話盒"));
 
+    gridLayout->addWidget(colorPushBtn, 0, 0, 1, 1); //addwidget(item, col, row, h, w)
+    gridLayout->addWidget(errorPushBtn, 0, 1, 1, 1);
+    gridLayout->addWidget(filePushBtn, 0, 2, 1, 1);
+    gridLayout->addWidget(fontPushBtn, 1, 0, 1, 1);
+    gridLayout->addWidget(inputPushBtn, 1, 1, 1, 1);
+    gridLayout->addWidget(pagePushBtn, 1, 2, 1, 1);
+    gridLayout->addWidget(progressPushBtn, 2, 0, 1, 1);
+    gridLayout->addWidget(printPushBtn, 2, 1, 1, 1);
+    gridLayout->addWidget(displayTextEdit, 3, 0, 3, 3);
+    //以上將QPushButton元件以及QTextEdit納入gridLayout管理
+
+    setLayout(gridLayout); //將目前對話盒視窗設為gridLayout
+
+    setWindowTitle(tr("內建對話盒函式"));
+    resize(400, 300);
+
 }
 
 CBuiltinDlg::~CBuiltinDlg() {}
